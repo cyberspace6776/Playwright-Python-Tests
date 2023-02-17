@@ -22,9 +22,10 @@ def test_CIM_form(page: Page) -> None:
     cim_page = CIMpage(page1)
     row = 0
     while row < 5:
-        relevance = ["high", "medium", "low", "none", ""]
-        impact = ["high", "medium", "low", "none", ""]
+        relevance = ["high", "medium", "low", "none", "", "high", "medium", "low"]
+        impact = ["high", "medium", "low", "none", "", "medium", "high", "none"]
         if row == 4:
+            row += 1
             continue
         cim_page.select_record(row)
         cim_page.select_relevance(relevance[row])
