@@ -1,10 +1,10 @@
-from playwright.sync_api import Page, expect
+from playwright.sync_api import expect
 
 
 class LoginPage:
     URL = ""
 
-    def __init__(self, page: Page) -> None:
+    def __init__(self, page) -> None:
         self.page = page
         self.email = page.get_by_placeholder("Email")
         self.password = page.get_by_placeholder("Password")
